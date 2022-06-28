@@ -4,7 +4,7 @@ from string import digits
 import numpy as np
 import argparse
 import cv2
-from utils.myutils import sort_contours
+from utils import sort_contours, cv_show, hstack_show
 
 #设置参数：原图像和模板图像
 ap = argparse.ArgumentParser()
@@ -12,12 +12,6 @@ ap.add_argument("--images", default="./images/card_04.jpg", help="path to input 
 ap.add_argument("--template", default="./images/card_template.jpg", help="path tot template OCR-A image")
 args = vars(ap.parse_args())
 
-#绘图展示函数
-def cv_show(name,img):
-  cv2.imshow(name,img)
-  cv2.waitKey()
-  cv2.destroyAllWindows()
-  
 ############################################ 1.读取模版图像并预处理 ############################################
 temp = cv2.imread(args['template'])
 
