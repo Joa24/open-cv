@@ -136,4 +136,4 @@ for (i,(gx,gy,gw,gh)) in enumerate(locs):
 print('credit card #:{}'.format("".join(output)))
 cv2.imshow("image",image)
 cv2.waitKey()
-cv2.destroyAllWindows() 
+cv2.destroyAllWindows()
